@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Weerasingha_Piriwena" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="22bf3ce1-aee2-499d-be91-87a26968de27">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="WeerasingaPiriwena.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="image" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String">
+		<defaultValueExpression><![CDATA[new java.util.Date()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalStudents" class="java.lang.String"/>
+	<parameter name="male" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM `student` INNER JOIN `guardian` ON `guardian`.`id` = `student`.`guardian_id` WHERE `student`.`id` =  $P{id}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="admission_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="admission_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="admission_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="current_grade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="current_grade"/>
+		<property name="com.jaspersoft.studio.field.label" value="current_grade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="name_with_initial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name_with_initial"/>
+		<property name="com.jaspersoft.studio.field.label" value="name_with_initial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="full_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="full_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="full_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="birth_day" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="birth_day"/>
+		<property name="com.jaspersoft.studio.field.label" value="birth_day"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gender"/>
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="image" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="image"/>
+		<property name="com.jaspersoft.studio.field.label" value="image"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="guardian_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="guardian_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="guardian_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="COLUMN_10" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guardian"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guardian"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guardian"/>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nic"/>
+		<property name="com.jaspersoft.studio.field.label" value="nic"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guardian"/>
+	</field>
+	<field name="mobile1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mobile1"/>
+		<property name="com.jaspersoft.studio.field.label" value="mobile1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guardian"/>
+	</field>
+	<field name="mobile2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mobile2"/>
+		<property name="com.jaspersoft.studio.field.label" value="mobile2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guardian"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="80" height="79" uuid="fca42951-48b2-416f-805e-64be1425c4bc"/>
+				<imageExpression><![CDATA["raven/icon/png/Chakra.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="80" y="0" width="470" height="30" uuid="38d75531-af64-417c-a99a-1bbb979016d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WP/GM Sri Weerasinghe Piriwena]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="30" width="470" height="30" uuid="4ea05fb1-fdc8-48dd-905b-72d9be4e7f5b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parakandeniya, Imbulgoda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="60" width="470" height="20" uuid="bdbb4a1b-f444-4ac5-bdc7-605110c0ef52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[+94 77 52 444 80/ +94 112 97 02 33]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="144" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="550" height="2" uuid="ea9eb0d1-3b92-4f98-aaae-0cface3cb2bc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="380" y="2" width="40" height="30" uuid="a0e320a4-2cf7-4528-a812-c01a7465a22a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="110" height="18" uuid="fffd13f4-e9e3-4e15-9de7-4b0e44ec1010"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Province]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="32" width="100" height="18" uuid="82dca796-271a-422f-b8c9-897b76ae94ca"/>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Western]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="110" height="18" uuid="8048c0ab-53d3-4d5d-b777-49ca9ec176b3"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Educational Zone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="50" width="100" height="18" uuid="f5b703ac-6952-4f3d-b3e7-bf9f8c4d147f"/>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Gampaha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="68" width="110" height="18" uuid="a82496d8-e245-4518-9e26-184e2fd25550"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Educational Division]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="68" width="100" height="18" uuid="6abf93d7-2139-4c90-9ced-5e4b7bdc6418"/>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Gampaha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="86" width="110" height="18" uuid="7942409e-153b-430e-a5a8-4176515650ba"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name of the Principal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="86" width="100" height="18" uuid="09f4282e-40ad-45f3-83f2-ddd61e122c9e"/>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Rev Dhammananda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="104" width="110" height="18" uuid="ba1d8b3b-e5b1-478d-ba9c-d71c1182c4ed"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="104" width="100" height="18" uuid="7fc4c28a-69d8-48e1-9139-bd0387c74bd5"/>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[+94 77 52 444 80]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="122" width="100" height="18" uuid="46af6758-0656-4142-9d76-8e50c2c0e72a"/>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[+94 112 97 02 33]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="68" width="110" height="18" uuid="5843f78a-e409-42f5-a8dc-6593f8130f0a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[School Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="68" width="100" height="18" uuid="60e61e67-db18-41fd-80fc-f35d967557ba"/>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Piriwena]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="86" width="110" height="18" uuid="bede65d7-86de-4e97-b942-5de85cd8de33"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[School Census No. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="86" width="100" height="18" uuid="c89ab397-c760-4ed0-b3c2-2b94c88c2309"/>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[402025]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="104" width="110" height="18" uuid="12a0e030-ef90-40b6-bb5a-5f73b7e47a81"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total No. of Students]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="104" width="50" height="18" uuid="0c20559c-79b9-47df-b92e-5fbdc0e9b5b4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Male]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="104" width="50" height="18" uuid="ea86c377-7da4-4161-a0b5-a2d176c354ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Reverand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="104" width="50" height="18" uuid="0672ff09-09b9-4196-b93c-4591c8d79702"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="480" y="122" width="50" height="18" uuid="40148e1a-3dfb-4d58-b43e-d6d042c0da42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{totalStudents}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="122" width="50" height="18" uuid="27454ae8-5105-4542-9d16-2b11ebc3f206"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{male}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="430" y="122" width="50" height="18" uuid="9be8cb05-b3aa-4d2b-99c8-6002ab9e8fca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[36]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="142" width="550" height="2" uuid="1d8bacb8-729a-4b0c-888b-2b45cd450681">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="420" y="2" width="130" height="30" uuid="e1c0b198-ca35-46cb-8f05-db0e0091e164"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="381" splitType="Stretch">
+			<image>
+				<reportElement x="430" y="60" width="120" height="143" uuid="bf611067-2ac5-411d-83c7-92380b4cad5e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{image}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="84" width="110" height="20" uuid="296680cd-5320-4725-9a9e-36580995a8ef"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Admission No. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="84" width="90" height="20" uuid="10b8fd6c-7648-40de-8494-d61d02430329"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admission_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="104" width="110" height="20" uuid="a3024004-6c74-4888-9f82-8bee1d95ef56"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Current Grade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="124" width="110" height="20" uuid="3dfebbee-8803-49a7-a5dc-7c2b6fc2f7c4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Name With Initials]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="144" width="110" height="20" uuid="d3090e73-55a8-466a-a4f1-745dba445cc0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="164" width="110" height="20" uuid="9a1db55f-c887-4f3e-a177-001ace84d78f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date of Birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="184" width="110" height="20" uuid="75a54ace-569a-412c-962e-0459e314819f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="550" height="30" uuid="e10ffea1-f756-49e8-ac0c-9ce920638216"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="550" height="30" uuid="8ba6c9fe-9210-4bf3-bf1d-c5067b6c7184"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parent/ Guardian Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="281" width="180" height="20" uuid="d6207e9f-e0b9-4fd5-8199-8215e4be5b65"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Parent/ Guardian Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="301" width="180" height="20" uuid="096fd491-f7d8-45ef-bcc9-4a5f5eb74b36"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Parent/ Guardian Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="321" width="180" height="20" uuid="278badcf-32ea-45d9-9b2a-695149ea44d6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Parent/ Guardian NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="341" width="180" height="20" uuid="25159a2e-a250-400b-adea-79926bde5367"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Parent/ Guardian Contact No 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="361" width="180" height="20" uuid="5a9706ce-ab1f-493e-a359-84f31f3be452"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Parent/ Guardian Contact No 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="110" height="20" uuid="c033aea0-fa68-46d3-ae8f-0973de83899b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="60" width="90" height="20" uuid="9e4f2e49-cc9a-4fbe-99e2-fe4c1982401e"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="104" width="90" height="20" uuid="97540c9d-e8aa-4aff-90b6-01bbe0780d51"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{current_grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="124" width="319" height="20" uuid="ee454a75-b133-4afc-9b47-a6eee72dfc8d"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name_with_initial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="144" width="320" height="20" uuid="1276b6a0-eaa1-4f0d-aa2f-3b022db55696"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{full_name}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy-MM-dd">
+				<reportElement x="110" y="164" width="90" height="20" uuid="30d894cc-4b1f-4e85-9f93-b2dac982a36a"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{birth_day}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="184" width="90" height="20" uuid="606fca7e-ed27-4958-85ed-50819bb2fb81"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="261" width="180" height="20" uuid="954d312c-8428-4b5c-867e-b02fd415add3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Parent/ Guardian Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="261" width="100" height="20" uuid="d6ba401b-d4f6-4773-82dc-0705d37db73c"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guardian_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="281" width="370" height="20" uuid="07d9b44a-a94c-4115-9cbe-4dbecb8ae6de"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="301" width="370" height="20" uuid="8b506a98-c64a-4c50-bad2-f1bd00b49116"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="321" width="100" height="20" uuid="2ed8ef16-61ff-4101-9c3e-b4740190d941"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="341" width="100" height="20" uuid="51af9ab9-d50b-47b0-bcf7-c2cca3932428"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobile1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="361" width="100" height="20" uuid="f1adf66f-7d69-485e-b1a9-cd574ea45a4f"/>
+				<box padding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobile2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="44" width="550" height="10" uuid="ddce3be8-bd56-4f7e-b761-4f40a14bc982"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="8"/>
+				</textElement>
+				<text><![CDATA[SOFTWARE BY SIMPLE IDEA : +94 70 17 949 34]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

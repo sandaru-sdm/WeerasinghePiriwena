@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\maduh\OneDrive\Documents\NetBeansProjects\WeerasinghePiriwena\dist\WeerasinghePiriwena.jar</jar>
+  <outfile>C:\Users\maduh\OneDrive\Documents\NetBeansProjects\WeerasinghePiriwena\dist\WeerasinghaPiriwena.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir></chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>true</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\maduh\OneDrive\Documents\NetBeansProjects\WeerasinghePiriwena\Chakra.ico</icon>
+  <singleInstance>
+    <mutexName>WeerasinghaPiriwena.exe</mutexName>
+    <windowTitle>WeerasinghaPiriwena.exe</windowTitle>
+  </singleInstance>
+  <jre>
+    <path>JRE</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>
